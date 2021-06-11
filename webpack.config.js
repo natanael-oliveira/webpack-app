@@ -28,6 +28,7 @@ module.exports = {
             },
             {
                 test: /\.(sc|sa|c)ss$/,
+                dependency: { not: ['url'] }, // NÃO APLICA ESTE LOADER PARA URLS
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
